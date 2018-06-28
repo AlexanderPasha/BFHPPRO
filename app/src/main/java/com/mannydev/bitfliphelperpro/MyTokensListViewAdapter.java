@@ -42,7 +42,7 @@ public class MyTokensListViewAdapter extends BaseAdapter {
         coinsLogos.put("R","https://s2.coinmarketcap.com/static/img/coins/32x32/2135.png");
         coinsLogos.put("RMC","https://s2.coinmarketcap.com/static/img/coins/32x32/2125.png");
         coinsLogos.put("BTG","https://s2.coinmarketcap.com/static/img/coins/32x32/2083.png");
-        coinsLogos.put("XRB","https://cryptocash.guru/wp-content/uploads/2018/01/Raiblocks-e1515532746199.png");
+        coinsLogos.put("NANO","https://s2.coinmarketcap.com/static/img/coins/32x32/1567.png");
         coinsLogos.put("FOOD","https://pbs.twimg.com/profile_images/933964866565615616/TV8E8ssQ_400x400.jpg");
         coinsLogos.put("REAL","https://s2.coinmarketcap.com/static/img/coins/32x32/2030.png");
         coinsLogos.put("EOS","https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png");
@@ -154,9 +154,9 @@ public class MyTokensListViewAdapter extends BaseAdapter {
             usd = bitflip.getBtgUsd().getBuy()*token.getBallance();
             txtProfit.setText(calcProfit(bitflip.getBtgUsd().getBuy(),token.getPrice()));
         }
-        if(token.getName().equals("XRB")){
-            usd = bitflip.getXrbUsd().getBuy()*token.getBallance();
-            txtProfit.setText(calcProfit(bitflip.getXrbUsd().getBuy(),token.getPrice()));
+        if(token.getName().equals("NANO")){
+            usd = bitflip.getNanoUsd().getBuy()*token.getBallance();
+            txtProfit.setText(calcProfit(bitflip.getNanoUsd().getBuy(),token.getPrice()));
         }
         if(token.getName().equals("FOOD")){
             usd = bitflip.getFoodUsd().getBuy()*token.getBallance();

@@ -18,13 +18,13 @@ public class Controller implements Observer {
     private Pair usdRub, btcUsd, btcRub, ltcUsd, ltcRub, ltcBtc,
             ethUsd, ethRub,ethBtc, xrpUsd, xrpRub,xrpBtc, trxUsd, trxRub,trxBtc, flipUsd, flipRub,
             flipBtc, dashUsd, dashRub,dashBtc, dogeUsd, dogeRub,dogeBtc, bchUsd, bchRub, bchBtc, rUsd, rRub,
-            rBtc, rmcUsd, rmcRub, rmcBtc, btgUsd, btgRub,btgBtc, xrbUsd, xrbRub,xrbBtc, foodUsd, foodRub,
+            rBtc, rmcUsd, rmcRub, rmcBtc, btgUsd, btgRub,btgBtc, nanoUsd, nanoRub,nanoBtc, foodUsd, foodRub,
             foodBtc, realUsd, realRub, realBtc,
             eosUsd,eosRub,eosBtc,btwUsd,btwRub,btwBtc,lindaUsd,lindaRub,lindaBtc, benUsd, benRub, benBtc,
             cscUsd,cscRub,cscBtc;
 
     private Coin btc, ltc, eth, xrp, trx, flip,
-            dash, doge, bch, r, rmc, btg, xrb, food, real, eos, btw, linda, ben, csc;
+            dash, doge, bch, r, rmc, btg, nano, food, real, eos, btw, linda, ben, csc;
 
     Observable observable;
     ArrayList<Coin> coins;
@@ -93,9 +93,9 @@ public class Controller implements Observer {
         this.btgRub = b.getBtgRub();
         this.btgBtc = b.getBtgBtc();
 
-        this.xrbUsd = b.getXrbUsd();
-        this.xrbRub = b.getXrbRub();
-        this.xrbBtc = b.getXrbBtc();
+        this.nanoUsd = b.getNanoUsd();
+        this.nanoRub = b.getNanoRub();
+        this.nanoBtc = b.getNanoBtc();
 
         this.foodUsd = b.getFoodUsd();
         this.foodRub = b.getFoodRub();
@@ -139,7 +139,7 @@ public class Controller implements Observer {
         this.r = new Coin("R", rUsd, rRub,rBtc, usdRub,btcUsd);
         this.rmc = new Coin("RMC", rmcUsd, rmcRub,rmcBtc, usdRub,btcUsd);
         this.btg = new Coin("BTG", btgUsd, btgRub,btgBtc, usdRub,btcUsd);
-        this.xrb = new Coin("XRB", xrbUsd, xrbRub, xrbBtc, usdRub,btcUsd);
+        this.nano = new Coin("NANO", nanoUsd, nanoRub, nanoBtc, usdRub,btcUsd);
         this.food = new Coin("FOOD", foodUsd, foodRub, foodBtc, usdRub,btcUsd);
         this.real = new Coin("REAL", realUsd, realRub,realBtc, usdRub,btcUsd);
         this.eos = new Coin("EOS", eosUsd, eosRub, eosBtc, usdRub,btcUsd);
@@ -164,7 +164,7 @@ public class Controller implements Observer {
         coins.add(r);
         coins.add(rmc);
         coins.add(btg);
-        coins.add(xrb);
+        coins.add(nano);
         coins.add(food);
         coins.add(real);
         coins.add(eos);

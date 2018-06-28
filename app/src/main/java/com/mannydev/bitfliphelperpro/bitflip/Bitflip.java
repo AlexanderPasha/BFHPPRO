@@ -51,9 +51,9 @@ public class Bitflip extends Observable {
     private Pair btgUsd;
     private Pair btgRub;
     private Pair btgBtc;
-    private Pair xrbUsd;
-    private Pair xrbRub;
-    private Pair xrbBtc;
+    private Pair nanoUsd;
+    private Pair nanoRub;
+    private Pair nanoBtc;
     private Pair foodUsd;
     private Pair foodRub;
     private Pair foodBtc;
@@ -134,9 +134,9 @@ public class Bitflip extends Observable {
         btgUsd = new Pair();
         btgRub = new Pair();
         btgBtc = new Pair();
-        xrbUsd = new Pair();
-        xrbRub = new Pair();
-        xrbBtc = new Pair();
+        nanoUsd = new Pair();
+        nanoRub = new Pair();
+        nanoBtc = new Pair();
         foodUsd = new Pair();
         foodRub = new Pair();
         foodBtc = new Pair();
@@ -373,20 +373,20 @@ public class Bitflip extends Observable {
                         object.getDouble("sell"));
             }
 
-            if (object.get("pair").equals("XRB:USD")) {
-                this.xrbUsd = new Pair((String) object.get("pair"),
+            if (object.get("pair").equals("NANO:USD")) {
+                this.nanoUsd = new Pair((String) object.get("pair"),
                         object.getDouble("buy"),
                         object.getDouble("sell"));
             }
 
-            if (object.get("pair").equals("XRB:RUB")) {
-                this.xrbRub = new Pair((String) object.get("pair"),
+            if (object.get("pair").equals("NANO:RUB")) {
+                this.nanoRub = new Pair((String) object.get("pair"),
                         object.getDouble("buy"),
                         object.getDouble("sell"));
             }
 
-            if (object.get("pair").equals("XRB:BTC")) {
-                this.xrbBtc = new Pair((String) object.get("pair"),
+            if (object.get("pair").equals("NANO:BTC")) {
+                this.nanoBtc = new Pair((String) object.get("pair"),
                         object.getDouble("buy"),
                         object.getDouble("sell"));
             }
@@ -622,12 +622,12 @@ public class Bitflip extends Observable {
         return btgRub;
     }
 
-    public Pair getXrbUsd() {
-        return xrbUsd;
+    public Pair getNanoUsd() {
+        return nanoUsd;
     }
 
-    public Pair getXrbRub() {
-        return xrbRub;
+    public Pair getNanoRub() {
+        return nanoRub;
     }
 
     public Pair getFoodUsd() {
@@ -706,8 +706,8 @@ public class Bitflip extends Observable {
         return btgBtc;
     }
 
-    public Pair getXrbBtc() {
-        return xrbBtc;
+    public Pair getNanoBtc() {
+        return nanoBtc;
     }
 
     public Pair getFoodBtc() {
