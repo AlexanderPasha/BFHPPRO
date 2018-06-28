@@ -78,6 +78,10 @@ public class Bitflip extends Observable {
     private Pair cscRub;
     private Pair cscBtc;
 
+    private Pair omgUsd;
+    private Pair omgRub;
+    private Pair omgBtc;
+
     private Bitflip() {
         initPairs();
     }
@@ -158,6 +162,9 @@ public class Bitflip extends Observable {
         cscUsd = new Pair();
         cscRub = new Pair();
         cscBtc = new Pair();
+        omgUsd = new Pair();
+        omgRub = new Pair();
+        omgBtc = new Pair();
     }
 
     public void refresh(String rates) {
@@ -515,6 +522,24 @@ public class Bitflip extends Observable {
                         object.getDouble("buy"),
                         object.getDouble("sell"));
             }
+
+            if (object.get("pair").equals("OMG:USD")) {
+                this.omgUsd = new Pair((String) object.get("pair"),
+                        object.getDouble("buy"),
+                        object.getDouble("sell"));
+            }
+
+            if (object.get("pair").equals("OMG:RUB")) {
+                this.omgRub = new Pair((String) object.get("pair"),
+                        object.getDouble("buy"),
+                        object.getDouble("sell"));
+            }
+
+            if (object.get("pair").equals("OMG:BTC")) {
+                this.omgBtc = new Pair((String) object.get("pair"),
+                        object.getDouble("buy"),
+                        object.getDouble("sell"));
+            }
         }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -760,6 +785,18 @@ public class Bitflip extends Observable {
 
     public Pair getCscBtc() {
         return cscBtc;
+    }
+
+    public Pair getOmgUsd() {
+        return omgUsd;
+    }
+
+    public Pair getOmgRub() {
+        return omgRub;
+    }
+
+    public Pair getOmgBtc() {
+        return omgBtc;
     }
 }
 

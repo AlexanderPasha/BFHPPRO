@@ -21,10 +21,10 @@ public class Controller implements Observer {
             rBtc, rmcUsd, rmcRub, rmcBtc, btgUsd, btgRub,btgBtc, nanoUsd, nanoRub,nanoBtc, foodUsd, foodRub,
             foodBtc, realUsd, realRub, realBtc,
             eosUsd,eosRub,eosBtc,btwUsd,btwRub,btwBtc,lindaUsd,lindaRub,lindaBtc, benUsd, benRub, benBtc,
-            cscUsd,cscRub,cscBtc;
+            cscUsd,cscRub,cscBtc, omgUsd,omgRub,omgBtc;
 
     private Coin btc, ltc, eth, xrp, trx, flip,
-            dash, doge, bch, r, rmc, btg, nano, food, real, eos, btw, linda, ben, csc;
+            dash, doge, bch, r, rmc, btg, nano, food, real, eos, btw, linda, ben, csc,omg;
 
     Observable observable;
     ArrayList<Coin> coins;
@@ -124,6 +124,10 @@ public class Controller implements Observer {
         this.cscUsd = b.getCscUsd();
         this.cscRub = b.getCscRub();
         this.cscBtc = b.getCscBtc();
+
+        this.omgUsd = b.getOmgUsd();
+        this.omgRub = b.getOmgRub();
+        this.omgBtc = b.getOmgBtc();
     }
 
     private void updateCoins() {
@@ -147,6 +151,7 @@ public class Controller implements Observer {
         this.linda = new Coin("LINDA", lindaUsd, lindaRub,lindaBtc, usdRub,btcUsd);
         this.ben = new Coin("BEN", benUsd, benRub,benBtc, usdRub,btcUsd);
         this.csc = new Coin("CSC", cscUsd,cscRub,cscBtc,usdRub,btcUsd);
+        this.omg = new Coin("OMG", omgUsd,omgRub,omgBtc,usdRub,btcUsd);
         addCoinsToList();
     }
 
@@ -172,6 +177,7 @@ public class Controller implements Observer {
         coins.add(linda);
         coins.add(ben);
         coins.add(csc);
+        coins.add(omg);
     }
 
     public ArrayList getCoins() {

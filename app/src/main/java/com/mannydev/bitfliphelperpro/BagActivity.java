@@ -326,6 +326,9 @@ public class BagActivity extends AppCompatActivity {
         if (token.getName().equals("CSC")) {
             usd = bitflip.getCscUsd().getBuy() * token.getBallance();
         }
+        if (token.getName().equals("OMG")) {
+            usd = bitflip.getOmgUsd().getBuy() * token.getBallance();
+        }
         usdInvest = usdInvest + token.getBallance() * token.getPrice();
         usdBalance = usdBalance + usd;
     }
